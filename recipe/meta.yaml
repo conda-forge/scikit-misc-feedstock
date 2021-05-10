@@ -1,5 +1,5 @@
 {% set name = "scikit-misc" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a3be820eaecef4bedc8577741481e0e99c001ad0142df5096fceaebe52e44233
+  sha256: 6997802953d2765bbf2f14ad0296d2ccac85e2f2b5af12296076ce327eba9410
 
 build:
-  number: 2
-  skip: True  # [win or py27]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  number: 0
+  skip: true  # [win or py27]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   build:
@@ -38,7 +38,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Miscellaneous tools for data analysis and scientific computing.'
+  summary: Miscellaneous tools for data analysis and scientific computing.
   doc_url: https://has2k1.github.io/scikit-misc
   dev_url: https://github.com/has2k1/scikit-misc
 
