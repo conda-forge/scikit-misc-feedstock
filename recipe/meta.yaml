@@ -10,7 +10,7 @@ source:
   sha256: 8c42780717a0f24b69edb4a584298e477fc9719ec796433d12682297fe1b5117
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -45,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - yihming
+    - bli25
