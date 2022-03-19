@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8c42780717a0f24b69edb4a584298e477fc9719ec796433d12682297fe1b5117
+  sha256: 3b0af2e175430a7b7965d2a1dfcf1e6a5d48e51210bdc681cf45e6741a2ec1a0
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -45,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - yihming
+    - bli25
