@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3b0af2e175430a7b7965d2a1dfcf1e6a5d48e51210bdc681cf45e6741a2ec1a0
+  sha256: 4fbc48e2f1e7dd614967234fe927a68a229458c8d198c93c9226c36edfa12199
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
