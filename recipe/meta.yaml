@@ -1,5 +1,5 @@
 {% set name = "scikit-misc" %}
-{% set version = "0.1.4" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4fbc48e2f1e7dd614967234fe927a68a229458c8d198c93c9226c36edfa12199
+  sha256: 7d5367253f2b17e330dcf0fe7afad7a6986bd6e747d45bd4727a67b7ac68cb0a
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
