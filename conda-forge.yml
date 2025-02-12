@@ -10,5 +10,4 @@ conda_build:
   pkg_format: '2'
 provider:
   linux_aarch64: default
-  osx_arm64: azure
 test: native_and_emulated
