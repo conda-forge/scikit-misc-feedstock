@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: true  # [win or py<310]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
@@ -20,13 +20,13 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - python >=3.10
+    - python
     - pip
     - meson-python
     - cython
     - numpy
   run:
-    - python >=3.10
+    - python
     - numpy
     - libopenblas
 
