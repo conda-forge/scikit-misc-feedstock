@@ -20,13 +20,13 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - python
+    - python >=3.10
     - pip
     - meson-python
     - cython
     - numpy
   run:
-    - python
+    - python >=3.10
     - numpy
     - libopenblas
 
