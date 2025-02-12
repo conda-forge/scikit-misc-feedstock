@@ -16,11 +16,13 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
     - python
     - pip
+    - setuptools
     - cython
     - numpy
   run:
