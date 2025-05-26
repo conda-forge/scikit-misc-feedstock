@@ -11,7 +11,6 @@ source:
 
 build:
   number: 5
-  skip: win
   script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
@@ -19,6 +18,10 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ compiler('fortran') }}
     - ${{ stdlib('c') }}
+    - if: build_platform != target_platform
+      then:
+        - cross-python_{{ target_platform }}
+        - python
   host:
     - meson-python
     - python
