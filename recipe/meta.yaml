@@ -1,16 +1,16 @@
 {% set name = "scikit-misc" %}
-{% set version = "0.1.4" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4fbc48e2f1e7dd614967234fe927a68a229458c8d198c93c9226c36edfa12199
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c5c1f69ac5f84e0103f40525c7d28ecc0ee028314cbc9f07c497cc39143e52a3
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -19,12 +19,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - python
+    - python >=3.10
     - pip
     - cython
     - numpy
   run:
-    - python
+    - python >=3.10
     - numpy
     - libopenblas
 
