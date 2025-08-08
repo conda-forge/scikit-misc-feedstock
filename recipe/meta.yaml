@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4f63fdbbd12a45b0a515df5a693471092faa3f9558f16b6ffbe465b5688cc56b
+  sha256: 1481be38c93e6a9913d3beb3dddaa7b57158abfc412599b82b9e3ece7930ce70
 
 build:
   number: 0
