@@ -25,6 +25,7 @@ requirements:
     - cython
     - numpy
     - setuptools
+    - meson-python
   run:
     - python
     - numpy
