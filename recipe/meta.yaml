@@ -26,6 +26,8 @@ requirements:
     - numpy
     - setuptools
     - meson-python
+    - wheel
+    - build
   run:
     - python
     - numpy
