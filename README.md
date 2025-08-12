@@ -201,7 +201,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@has2k1](https://github.com/has2k1)
 * [@bli25](https://github.com/bli25/)
+* [@has2k1](https://github.com/has2k1/)
 * [@yihming](https://github.com/yihming/)
 
