@@ -10,7 +10,7 @@ source:
   sha256: 1481be38c93e6a9913d3beb3dddaa7b57158abfc412599b82b9e3ece7930ce70
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or py<310]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -26,10 +26,11 @@ requirements:
     - numpy
     - setuptools
     - meson-python
+    - wheel
+    - python-build
   run:
     - python
     - numpy
-    - libopenblas
 
 test:
   imports:
