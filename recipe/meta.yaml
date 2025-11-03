@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/scikit_misc/scikit_misc-{{ version }}.tar.gz
   sha256: 49fa30e4051b341edc7422db66a12c0f59d468729285bfe644d10924dc51be0a
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win or py<310]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
