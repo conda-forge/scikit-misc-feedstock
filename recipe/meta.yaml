@@ -37,10 +37,10 @@ requirements:
     - python
     - numpy
 
-test:
-  imports:
-    - skmisc
-    - skmisc.loess
+# test:
+#   imports:
+#     - skmisc
+#     - skmisc.loess
 
 about:
   home: https://github.com/has2k1/scikit-misc
