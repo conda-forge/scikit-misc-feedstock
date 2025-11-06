@@ -1,6 +1,9 @@
 {% set name = "scikit-misc" %}
 {% set version = "0.5.2" %}
 
+# ensure is_freethreading gets detected as a used variable
+# [is_freethreading]
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -19,6 +22,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - pkg-config                             # [build_platform != target_platform]
+    - ninja                                  # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler("c") }}
     - {{ stdlib("c") }}

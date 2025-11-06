@@ -3,9 +3,6 @@ set -ex
 
 mkdir builddir
 
-# binary is called `pkg-config`, but package metadata is under `lib/pkgconfig`
-export MESON_ARGS="${MESON_ARGS} --pkg-config-path=${PREFIX}/lib/pkgconfig"
-
 # HACK: extend $CONDA_PREFIX/meson_cross_file that's created in
 # https://github.com/conda-forge/ctng-compiler-activation-feedstock/blob/main/recipe/activate-gcc.sh
 # https://github.com/conda-forge/clang-compiler-activation-feedstock/blob/main/recipe/activate-clang.sh
