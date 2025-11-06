@@ -25,22 +25,46 @@ requirements:
     - {{ compiler("fortran") }}
   host:
     - python
-    - pip
-    - pkg-config
     - cython
-    - numpy
-    - setuptools
     - meson-python
-    - wheel
     - python-build
+    - setuptools
+    - pkg-config
+    - pip
+    - numpy
   run:
     - python
     - numpy
 
-# test:
-#   imports:
-#     - skmisc
-#     - skmisc.loess
+# the top-level build.{sh,bat} builds scikit-misc, and then
+# build-output.{sh,bat} installs the files
+outputs:
+  - name: scikit-misc
+    script: build-output.sh
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        # only need these for the strong run exports
+        - {{ compiler('c') }}
+        - {{ stdlib('c') }}
+        - {{ compiler('fortran') }}
+      host:
+        - python
+        - cython
+        - meson-python
+        - python-build
+        - setuptools
+        - pkg-config
+        - pip
+        - numpy
+      run:
+        - python
+        - numpy
+    test:
+      imports:
+        - skmisc
+        - skmisc.loess
 
 about:
   home: https://github.com/has2k1/scikit-misc
