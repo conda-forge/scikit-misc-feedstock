@@ -23,6 +23,7 @@ requirements:
     - {{ compiler("c") }}
     - {{ stdlib("c") }}
     - {{ compiler("fortran") }}
+    - ninja
   host:
     - python
     - pip
