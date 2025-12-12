@@ -1,5 +1,5 @@
 {% set name = "scikit-misc" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/has2k1/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1481be38c93e6a9913d3beb3dddaa7b57158abfc412599b82b9e3ece7930ce70
+  sha256: d519ff464b3137a19c968b9d8d0912a6523684016d40da0a6d030131dc5866b0
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
